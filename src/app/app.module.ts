@@ -28,7 +28,6 @@ import { SignUPComponent } from './main/sign-up/sign-up.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule
   ],
