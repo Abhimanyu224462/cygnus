@@ -8,8 +8,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CreateFComponent {
 
- 
-constructor(private fb:FormBuilder){}
+
+
+constructor(private fb:FormBuilder){
+
+}
 // DECLARATION
 stuRegForm!:FormGroup
 
@@ -20,9 +23,9 @@ ngOnInit(){
   this.stuRegForm = this.fb.group({
     name:['',[Validators.required,Validators.pattern('[a-zA-Z]{2,50}')]],
     class:['',[Validators.required,Validators.pattern('([1-9]|1[0-2])$')]],
-    roll:['',[Validators.required,Validators.pattern('[0-9]')]],
+    roll:['',[Validators.required,Validators.pattern('([1-9])+$')]],
     marks:['',[Validators.required,Validators.pattern('(100|[1-9]?[0-9])$')]],
-    rank:['',[Validators.required,Validators.pattern('[0-9]')]],
+    rank:['',[Validators.required,Validators.pattern('([0-9])+$')]],
     sex:['',[Validators.required]],
     city:['',[Validators.required]]
 
@@ -36,5 +39,7 @@ ngOnInit(){
 save() {
  console.log("Student Data", this.stuRegForm.value)
   }
+
+
 
 }

@@ -1,0 +1,14 @@
+{
+    "stuData":[
+        {
+            "id":"1",
+            "name":"Rakesh",
+            "class":"7",
+            "marks":"34",
+            "rank":"58",
+            "roll":"48",
+            "sex":"male",
+            "city":"Nashik"
+        }
+    ]
+}

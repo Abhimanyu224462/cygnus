@@ -12,6 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './HandF/home/home.component';
 import { NotFoundComponent } from './HandF/not-found/not-found.component';
 import { SignUPComponent } from './main/sign-up/sign-up.component';
+import {HttpClientModule} from '@angular/common/http'
+import { HttpService } from './shared/http.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { SignUPComponent } from './main/sign-up/sign-up.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
