@@ -10,24 +10,24 @@
         <div class="container col-md-8 d-flex border shadow mt-3 mb-3">
 
             <div class="mb-3 mt-3 col-md-4">
-                <label for="exampleFormControlInput1" class="form-label">Search Name</label>
-                <input type="text" class="form-control bg-transparent border-1" id="id1" placeholder="Name" [(ngModel)] = "searchName" (ngModelChange)="noRecPipe()">
+                <label for="exampleFormControlInput1" class="form-label">Search Name/Class</label>
+                <input type="text" class="form-control bg-transparent border-1" id="id1" placeholder="Name/Class" [(ngModel)] = "searchName" (ngModelChange)="noRecPipe()">
             </div>
 
             <div class="col-md-4 mt-3">
-                <label for="class" class="form-label">Filter Class</label>
+                <label for="class" class="form-label">Filter City</label>
                 <select name="Class" class="form-select bg-transparent border-1" aria-label="Default select example">
-                    <option selected>Select Class</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
+                    <option selected>Select City</option>
+                    <option value="nashik">Nashik</option>
+                    <option value="pune">Pune</option>
+                    <option value="nagpur">Nagpur</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="gondia">Gondia</option>
+                    <!-- <option value="6">6</option>
                     <option value="7">7</option>
                     <option value="8">8</option>
                     <option value="9">9</option>
-                    <option value="10">10</option>
+                    <option value="10">10</option> -->
                 </select>
             </div>
 

@@ -9,10 +9,17 @@ export class SearchPipePipe implements PipeTransform {
     console.log("pipe activated");
     // console.log("search text value in pipe",args);
     let filterData = []
+    let filterClass = []
+    // let filterCity = []
+    let combined = []
     let searchName = args[0]
     searchName = searchName.toLowerCase()
     filterData = value.filter((el:any)=>el.name.toLowerCase().includes(searchName))
-    return filterData 
+    filterClass = value.filter((el:any)=>el.class.toLowerCase().includes(searchName))
+    // filterCity = value.filter((el:any)=>el.city.toLowerCase().includes(searchName))
+
+    combined = [...new Set([...filterData, ...filterClass])];
+    return combined
   }
 
 }
