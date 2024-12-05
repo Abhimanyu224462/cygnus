@@ -14,6 +14,7 @@ import { NotFoundComponent } from './HandF/not-found/not-found.component';
 import { SignUPComponent } from './main/sign-up/sign-up.component';
 import {HttpClientModule} from '@angular/common/http'
 import { HttpService } from './shared/http.service';
+import { SearchPipePipe } from './pipes/search-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpService } from './shared/http.service';
     LoginFComponent,
     HomeComponent,
     NotFoundComponent,
-    SignUPComponent
+    SignUPComponent,
+    SearchPipePipe
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,7 @@ import { HttpService } from './shared/http.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [SearchPipePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

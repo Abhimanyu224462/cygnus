@@ -9,6 +9,7 @@ import { SignUPComponent } from './main/sign-up/sign-up.component';
 
 const routes: Routes = [
   {path:'createF',component:CreateFComponent},
+  {path:'createF/:sID',component:CreateFComponent},
   {path:'displayF',component:DisplayFComponent},
   {path:'login',component:LoginFComponent},
   {path:'signup',component:SignUPComponent},

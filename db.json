@@ -1,14 +1,364 @@
 {
-    "stuData":[
-        {
-            "id":"1",
-            "name":"Rakesh",
-            "class":"7",
-            "marks":"34",
-            "rank":"58",
-            "roll":"48",
-            "sex":"male",
-            "city":"Nashik"
-        }
-    ]
+  "stuData": [
+    {
+      "id": "1",
+      "name": "Rakesh",
+      "class": "7",
+      "marks": "34",
+      "rank": "58",
+      "roll": "48",
+      "sex": "male",
+      "city": "Nashik"
+    },
+    {
+      "name": "Pooja",
+      "class": "8",
+      "roll": "41",
+      "marks": "78",
+      "rank": "12",
+      "sex": "female",
+      "city": "Mumbai",
+      "id": "2"
+    },
+    {
+      "name": "Neha",
+      "class": "7",
+      "roll": "8",
+      "marks": "91",
+      "rank": "5",
+      "sex": "female",
+      "city": "Nagpur",
+      "id": "4"
+    },
+    {
+      "name": "Vikram",
+      "class": "9",
+      "roll": "14",
+      "marks": "45",
+      "rank": "40",
+      "sex": "male",
+      "city": "Gondia",
+      "id": "5"
+    },
+    {
+      "id": "6",
+      "name": "Anjali",
+      "class": "10",
+      "marks": "88",
+      "rank": "7",
+      "roll": "9",
+      "sex": "female",
+      "city": "Mumbai"
+    },
+    {
+      "id": "7",
+      "name": "Rohit",
+      "class": "8",
+      "marks": "55",
+      "rank": "28",
+      "roll": "5",
+      "sex": "male",
+      "city": "Nagpur"
+    },
+    {
+      "id": "8",
+      "name": "Sneha",
+      "class": "6",
+      "marks": "48",
+      "rank": "35",
+      "roll": "22",
+      "sex": "female",
+      "city": "Pune"
+    },
+    {
+      "name": "Manoj",
+      "class": "7",
+      "roll": "35",
+      "marks": "62",
+      "rank": "18",
+      "sex": "male",
+      "city": "Nashik",
+      "id": "9"
+    },
+    {
+      "id": "10",
+      "name": "Kiran",
+      "class": "9",
+      "marks": "70",
+      "rank": "14",
+      "roll": "12",
+      "sex": "female",
+      "city": "Gondia"
+    },
+    {
+      "name": "Rajesh",
+      "class": "8",
+      "roll": "32",
+      "marks": "59",
+      "rank": "20",
+      "sex": "male",
+      "city": "Mumbai",
+      "id": "11"
+    },
+    {
+      "id": "12",
+      "name": "Prerna",
+      "class": "6",
+      "marks": "83",
+      "rank": "10",
+      "roll": "18",
+      "sex": "female",
+      "city": "Nagpur"
+    },
+    {
+      "id": "13",
+      "name": "Arjun",
+      "class": "7",
+      "marks": "50",
+      "rank": "30",
+      "roll": "25",
+      "sex": "male",
+      "city": "Nashik"
+    },
+    {
+      "id": "14",
+      "name": "Meena",
+      "class": "8",
+      "marks": "71",
+      "rank": "15",
+      "roll": "19",
+      "sex": "female",
+      "city": "Pune"
+    },
+    {
+      "id": "15",
+      "name": "Nitin",
+      "class": "9",
+      "marks": "47",
+      "rank": "40",
+      "roll": "8",
+      "sex": "male",
+      "city": "Gondia"
+    },
+    {
+      "id": "16",
+      "name": "Akash",
+      "class": "7",
+      "marks": "82",
+      "rank": "8",
+      "roll": "13",
+      "sex": "male",
+      "city": "Mumbai"
+    },
+    {
+      "id": "17",
+      "name": "Deepa",
+      "class": "8",
+      "marks": "74",
+      "rank": "11",
+      "roll": "27",
+      "sex": "female",
+      "city": "Nagpur"
+    },
+    {
+      "id": "18",
+      "name": "Sameer",
+      "class": "6",
+      "marks": "39",
+      "rank": "50",
+      "roll": "20",
+      "sex": "male",
+      "city": "Nashik"
+    },
+    {
+      "id": "19",
+      "name": "Kavita",
+      "class": "10",
+      "marks": "96",
+      "rank": "1",
+      "roll": "4",
+      "sex": "female",
+      "city": "Pune"
+    },
+    {
+      "id": "20",
+      "name": "Rahul",
+      "class": "7",
+      "marks": "66",
+      "rank": "18",
+      "roll": "6",
+      "sex": "male",
+      "city": "Gondia"
+    },
+    {
+      "id": "21",
+      "name": "Priya",
+      "class": "9",
+      "marks": "80",
+      "rank": "9",
+      "roll": "15",
+      "sex": "female",
+      "city": "Mumbai"
+    },
+    {
+      "id": "22",
+      "name": "Vivek",
+      "class": "6",
+      "marks": "54",
+      "rank": "29",
+      "roll": "11",
+      "sex": "male",
+      "city": "Nagpur"
+    },
+    {
+      "id": "23",
+      "name": "Sonali",
+      "class": "8",
+      "marks": "89",
+      "rank": "4",
+      "roll": "3",
+      "sex": "female",
+      "city": "Nashik"
+    },
+    {
+      "id": "24",
+      "name": "Harish",
+      "class": "7",
+      "marks": "43",
+      "rank": "42",
+      "roll": "17",
+      "sex": "male",
+      "city": "Pune"
+    },
+    {
+      "id": "25",
+      "name": "Shreya",
+      "class": "9",
+      "marks": "92",
+      "rank": "3",
+      "roll": "29",
+      "sex": "female",
+      "city": "Gondia"
+    },
+    {
+      "id": "26",
+      "name": "Nikhil",
+      "class": "10",
+      "marks": "60",
+      "rank": "23",
+      "roll": "7",
+      "sex": "male",
+      "city": "Mumbai"
+    },
+    {
+      "id": "27",
+      "name": "Alka",
+      "class": "8",
+      "marks": "77",
+      "rank": "13",
+      "roll": "18",
+      "sex": "female",
+      "city": "Nagpur"
+    },
+    {
+      "id": "28",
+      "name": "Gopal",
+      "class": "7",
+      "marks": "51",
+      "rank": "34",
+      "roll": "22",
+      "sex": "male",
+      "city": "Nashik"
+    },
+    {
+      "id": "29",
+      "name": "Radha",
+      "class": "6",
+      "marks": "44",
+      "rank": "39",
+      "roll": "25",
+      "sex": "female",
+      "city": "Pune"
+    },
+    {
+      "name": "Kunal",
+      "class": "7",
+      "roll": "11",
+      "marks": "68",
+      "rank": "16",
+      "sex": "male",
+      "city": "Gondia",
+      "id": "30"
+    },
+    {
+      "id": "31",
+      "name": "Swati",
+      "class": "8",
+      "marks": "72",
+      "rank": "14",
+      "roll": "26",
+      "sex": "female",
+      "city": "Mumbai"
+    },
+    {
+      "id": "32",
+      "name": "Akhil",
+      "class": "6",
+      "marks": "36",
+      "rank": "46",
+      "roll": "16",
+      "sex": "male",
+      "city": "Nagpur"
+    },
+    {
+      "id": "33",
+      "name": "Snehal",
+      "class": "10",
+      "marks": "90",
+      "rank": "6",
+      "roll": "2",
+      "sex": "female",
+      "city": "Nashik"
+    },
+    {
+      "id": "34",
+      "name": "Ravi",
+      "class": "7",
+      "marks": "40",
+      "rank": "45",
+      "roll": "19",
+      "sex": "male",
+      "city": "Pune"
+    },
+    {
+      "id": "35",
+      "name": "Payal",
+      "class": "9",
+      "marks": "75",
+      "rank": "12",
+      "roll": "23",
+      "sex": "female",
+      "city": "Gondia"
+    },
+    {
+      "id": "1474",
+      "name": "Abhi",
+      "class": "10",
+      "roll": "1",
+      "marks": "98",
+      "rank": "1",
+      "sex": "male",
+      "city": "Nashik"
+    },
+    {
+      "name": "Vikram",
+      "class": "9",
+      "roll": "55",
+      "marks": "56",
+      "rank": "25",
+      "sex": "male",
+      "city": "Mumbai",
+      "id": "5192"
+    }
+  ]
 }

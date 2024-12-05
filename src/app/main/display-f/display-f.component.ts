@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SearchPipePipe } from 'src/app/pipes/search-pipe.pipe';
 import { HttpService } from 'src/app/shared/http.service';
 
 @Component({
@@ -8,16 +9,30 @@ import { HttpService } from 'src/app/shared/http.service';
 })
 export class DisplayFComponent {
 
-  constructor(private http: HttpService) { }
 
-  // DECLARATIO
+  constructor(private http: HttpService, private searchPipe:SearchPipePipe) {
+    
+   }
+
+  // DECLARATION
   
   stuInfoRec!: any
-
+  stuselectedID!:any
+  id!:any
+  searchName:string|null = "";
+noRecordsFound: any;
 
   ngOnInit() {
     this.getData()
   }
+//FUNCTIONS
+
+fetchID(id:any){
+this.id = id
+console.log(id)
+this.deleteData()
+}
+
 
 // GET
 
@@ -32,7 +47,29 @@ export class DisplayFComponent {
     })
   }
 
+  //DELETE
 
+  deleteData(){
+    const selection = confirm("are you sure want to delete")
+    if(selection){
+      const endpoint = 'stuData/' + this.id
+      this.http.deleteDataFromServer(endpoint).subscribe({
+        next:(response:any)=>{
+          console.log("data with ID" + this.id + "deleted")
+          this.getData()
+        }
+      })
+    }
+   
+  }
 
+noRecPipe(){
+  const nameD = this.searchPipe.transform(this.stuInfoRec,this.searchName)
+  if(nameD && nameD.length ==0){
+    this.noRecordsFound = true
+  } else {
+    this.noRecordsFound=false
+  }
+}
 
 }
