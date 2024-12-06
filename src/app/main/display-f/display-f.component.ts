@@ -10,8 +10,6 @@ import { HttpService } from 'src/app/shared/http.service';
 })
 export class DisplayFComponent {
 
-
-
   constructor(private http: HttpService, private searchPipe: SearchPipePipe) {
 
   }
@@ -23,10 +21,15 @@ export class DisplayFComponent {
   id!: any
   searchName: string | null = "";
   noRecordsFound: any;
+  sorting: string = ""
+  sortingD: string = ""
+  sortField: string = 'rank'
+  sortFieldD: string = 'rank'
 
   ngOnInit() {
     this.getData()
   }
+
   //FUNCTIONS
 
   fetchID(id: any) {
@@ -35,22 +38,26 @@ export class DisplayFComponent {
     this.deleteData()
   }
 
+  //PIPES 
+
+  noRecPipe() {
+    const nameD = this.searchPipe.transform(this.stuInfoRec, this.searchName)
+    if (nameD && nameD.length == 0) {
+      this.noRecordsFound = true
+    } else {
+      this.noRecordsFound = false
+    }
+  }
+
   descending() {
     this.sortingD = this.sortFieldD
     console.log("descending activated")
   }
-sorting:string = ""
-sortingD:string = ""
+
   ascending() {
-
     this.sorting = this.sortField
-
-
     console.log("ascending activated")
   }
-
-  sortField:string = 'rank'
-  sortFieldD:string = 'rank'
 
   // GET
 
@@ -79,15 +86,6 @@ sortingD:string = ""
       })
     }
 
-  }
-
-  noRecPipe() {
-    const nameD = this.searchPipe.transform(this.stuInfoRec, this.searchName)
-    if (nameD && nameD.length == 0) {
-      this.noRecordsFound = true
-    } else {
-      this.noRecordsFound = false
-    }
   }
 
 }

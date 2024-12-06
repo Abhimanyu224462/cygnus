@@ -5,13 +5,15 @@
     </div>
 
     <div class="">
+
         <h1 class="display-4 position-relative text-center text-black">Student's Data</h1>
 
         <div class="container col-md-8 d-flex border shadow mt-3 mb-3">
 
             <div class="mb-3 mt-3 col-md-4">
                 <label for="exampleFormControlInput1" class="form-label">Search Name/Class</label>
-                <input type="text" class="form-control bg-transparent border-1" id="id1" placeholder="Name/Class" [(ngModel)] = "searchName" (ngModelChange)="noRecPipe()">
+                <input type="text" class="form-control bg-transparent border-1" id="id1" placeholder="Name/Class"
+                    [(ngModel)]="searchName" (ngModelChange)="noRecPipe()">
             </div>
 
             <div class="col-md-4 mt-3">
@@ -23,28 +25,20 @@
                     <option value="nagpur">Nagpur</option>
                     <option value="mumbai">Mumbai</option>
                     <option value="gondia">Gondia</option>
-                    <!-- <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option> -->
                 </select>
             </div>
 
-            <!-- <button class="btn btn-success"> sort <i class="bi bi-sort-alpha-down"></i></button> -->
-
-            <h4 class="mt-5 mx-5 display-8 form-label"><i class="bi bi-sort-numeric-down" (click)="ascending()"></i> <span
-                    class="mx-2">Rank</span> <i class="bi bi-sort-numeric-up-alt" (click)="descending()"></i> </h4>
+            <h4 class="mt-5 mx-5 display-8 form-label">
+                <i class="bi bi-sort-numeric-down" (click)="ascending()"></i>
+                <span class="mx-2">Rank</span>
+                <i class="bi bi-sort-numeric-up-alt" (click)="descending()"></i>
+            </h4>
 
         </div>
 
-        <!-- </div> -->
-
-
         <div class="container col-md-8 d-flex border shadow mt-3 table-scroll">
 
-
-            <table class="table table-striped mt-3 text-center"style="background-color: 255,255,255,0.5;">
+            <table class="table table-striped mt-3 text-center" style="background-color: 255,255,255,0.5;">
                 <thead>
                     <tr class="sticky-top">
                         <th scope="col">Edit</th>
@@ -60,9 +54,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr  *ngFor="let stuItem of stuInfoRec|searchPipe:searchName | sortpipe1:sorting | sortpipe1D:sortingD; let i = index">
-                        <th><i class="bi bi-pen-fill" [routerLink]="['/createF',stuItem.id]" [queryParams]="{'action':'EDIT'}"></i></th>
+                    <tr
+                        *ngFor="let stuItem of stuInfoRec|searchPipe:searchName | sortpipe1:sorting | sortpipe1D:sortingD; let i = index">
+
+                        <th><i class="bi bi-pen-fill" [routerLink]="['/createF',stuItem.id]"
+                                [queryParams]="{'action':'EDIT'}"></i></th>
+
                         <th><i class="bi bi-trash3-fill" (click)="fetchID(stuItem.id)"></i></th>
+
                         <th scope="row">{{i+1}}</th>
                         <td>{{stuItem.name}}</td>
                         <td>{{stuItem.class}}</td>
@@ -71,19 +70,16 @@
                         <td>{{stuItem.roll}}</td>
                         <td>{{stuItem.sex}}</td>
                         <td>{{stuItem.city}}</td>
-                       
+
                     </tr>
 
-                   
-                 
                 </tbody>
+
                 <tr *ngIf="noRecordsFound">
                     <td class="alert alert-danger text-center" colspan="10">NO RECORD FOUND</td>
                 </tr>
+
             </table>
-
-
-
 
         </div>
     </div>
