@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SearchPipePipe } from 'src/app/pipes/search-pipe.pipe';
+import { Sortpipe1Pipe } from 'src/app/pipes/sortpipe1.pipe';
 import { HttpService } from 'src/app/shared/http.service';
 
 @Component({
@@ -10,31 +11,48 @@ import { HttpService } from 'src/app/shared/http.service';
 export class DisplayFComponent {
 
 
-  constructor(private http: HttpService, private searchPipe:SearchPipePipe) {
-    
-   }
+
+  constructor(private http: HttpService, private searchPipe: SearchPipePipe) {
+
+  }
 
   // DECLARATION
-  
+
   stuInfoRec!: any
-  stuselectedID!:any
-  id!:any
-  searchName:string|null = "";
-noRecordsFound: any;
+  stuselectedID!: any
+  id!: any
+  searchName: string | null = "";
+  noRecordsFound: any;
 
   ngOnInit() {
     this.getData()
   }
-//FUNCTIONS
+  //FUNCTIONS
 
-fetchID(id:any){
-this.id = id
-console.log(id)
-this.deleteData()
-}
+  fetchID(id: any) {
+    this.id = id
+    console.log(id)
+    this.deleteData()
+  }
+
+  descending() {
+    this.sortingD = this.sortFieldD
+    console.log("descending activated")
+  }
+sorting:string = ""
+sortingD:string = ""
+  ascending() {
+
+    this.sorting = this.sortField
 
 
-// GET
+    console.log("ascending activated")
+  }
+
+  sortField:string = 'rank'
+  sortFieldD:string = 'rank'
+
+  // GET
 
   getData() {
     this.http.getDataFromServer("stuData").subscribe({
@@ -49,27 +67,27 @@ this.deleteData()
 
   //DELETE
 
-  deleteData(){
+  deleteData() {
     const selection = confirm("are you sure want to delete")
-    if(selection){
+    if (selection) {
       const endpoint = 'stuData/' + this.id
       this.http.deleteDataFromServer(endpoint).subscribe({
-        next:(response:any)=>{
+        next: (response: any) => {
           console.log("data with ID" + this.id + "deleted")
           this.getData()
         }
       })
     }
-   
+
   }
 
-noRecPipe(){
-  const nameD = this.searchPipe.transform(this.stuInfoRec,this.searchName)
-  if(nameD && nameD.length ==0){
-    this.noRecordsFound = true
-  } else {
-    this.noRecordsFound=false
+  noRecPipe() {
+    const nameD = this.searchPipe.transform(this.stuInfoRec, this.searchName)
+    if (nameD && nameD.length == 0) {
+      this.noRecordsFound = true
+    } else {
+      this.noRecordsFound = false
+    }
   }
-}
 
 }

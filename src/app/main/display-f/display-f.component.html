@@ -33,8 +33,8 @@
 
             <!-- <button class="btn btn-success"> sort <i class="bi bi-sort-alpha-down"></i></button> -->
 
-            <h4 class="mt-5 mx-5 display-8 form-label"><i class="bi bi-sort-numeric-down"></i> <span
-                    class="mx-2">Rank</span> <i class="bi bi-sort-numeric-up-alt"></i> </h4>
+            <h4 class="mt-5 mx-5 display-8 form-label"><i class="bi bi-sort-numeric-down" (click)="ascending()"></i> <span
+                    class="mx-2">Rank</span> <i class="bi bi-sort-numeric-up-alt" (click)="descending()"></i> </h4>
 
         </div>
 
@@ -60,7 +60,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr  *ngFor="let stuItem of stuInfoRec|searchPipe:searchName; let i = index">
+                    <tr  *ngFor="let stuItem of stuInfoRec|searchPipe:searchName | sortpipe1:sorting | sortpipe1D:sortingD; let i = index">
                         <th><i class="bi bi-pen-fill" [routerLink]="['/createF',stuItem.id]" [queryParams]="{'action':'EDIT'}"></i></th>
                         <th><i class="bi bi-trash3-fill" (click)="fetchID(stuItem.id)"></i></th>
                         <th scope="row">{{i+1}}</th>

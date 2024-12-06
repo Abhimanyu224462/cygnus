@@ -15,6 +15,8 @@ import { SignUPComponent } from './main/sign-up/sign-up.component';
 import {HttpClientModule} from '@angular/common/http'
 import { HttpService } from './shared/http.service';
 import { SearchPipePipe } from './pipes/search-pipe.pipe';
+import { Sortpipe1Pipe } from './pipes/sortpipe1.pipe';
+import { Sortpipe1DPipe } from './pipes/sortpipe1-d.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { SearchPipePipe } from './pipes/search-pipe.pipe';
     HomeComponent,
     NotFoundComponent,
     SignUPComponent,
-    SearchPipePipe
+    SearchPipePipe,
+    Sortpipe1Pipe,
+    Sortpipe1DPipe
   ],
   imports: [
     BrowserModule,
